@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Run from this directory
+cd "${0%/*}" || exit 1
+
+# Source tutorial run functions
+. "$WM_PROJECT_DIR/bin/tools/RunFunctions"
+
+
+clear 
+echo "*---------- Running Conjugate Heat Transfer Simulation --------* "
+./Allclean
+echo "1 - Meshing Fluid and Solid Region : "
+runApplication -o blockMesh
+#------------Run Toposet------------------------
+runApplication -o topoSet
+#------------Split Mesh Region Accordingly --------
+echo "2 - Splitting Mesh into Regions : "
+runApplication splitMeshRegions -cellZones -overwrite
+echo "3 - Decomposing the Mesh For Parallel Computing : "
+runApplication decomposePar -allRegions
+echo "3 - Run Conjugate Heat Transfer : "
+runParallel $(getApplication)
+echo "4- Reconstruct the Mesh : "
+runApplication reconstructPar -allRegions
+echo "5- Results in Paraview : "
+paraFoam -builtin
+
+#------------------------------------------------------------------------------

@@ -1,0 +1,12 @@
+#!/bin/sh
+#Run Steady State conduction in OpenFoam
+# Run from this directory
+cd "${0%/*}" || exit 1
+
+. "$WM_PROJECT_DIR/bin/tools/RunFunctions"
+./Allclean
+runApplication blockMesh
+runApplication checkMesh
+runApplication $(getApplication)
+
+#------------------------------------------------------------------------------

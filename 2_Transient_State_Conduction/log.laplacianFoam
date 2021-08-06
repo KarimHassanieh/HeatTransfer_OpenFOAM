@@ -1,0 +1,154 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 9-89839ae3b8cd
+Exec   : laplacianFoam
+Date   : Aug 06 2021
+Time   : 12:39:53
+Host   : "karimh89"
+PID    : 34944
+I/O    : uncollated
+Case   : /home/karim/Desktop/Projects/CFD/OpenFoam_Projects/Heat_Transfer/2_Transient_State_Conduction
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: No convergence criteria found
+
+Reading field T
+
+
+
+--> FOAM FATAL IO ERROR: 
+Unknown patchField type oscillatingFixedValue for patch type wall
+
+Valid patchField types are :
+
+105
+(
+advective
+calculated
+codedFixedValue
+codedMixed
+compressible::alphatJayatillekeWallFunction
+compressible::alphatWallFunction
+compressible::thermalBaffle1D<eConstSolidThermoPhysics>
+compressible::thermalBaffle1D<ePowerSolidThermoPhysics>
+compressible::turbulentTemperatureCoupledBaffleMixed
+compressible::turbulentTemperatureRadCoupledMixed
+convectiveHeatTransfer
+cyclic
+cyclicACMI
+cyclicAMI
+cyclicRepeatAMI
+cyclicSlip
+directionMixed
+empty
+energyJump
+energyJumpAMI
+entrainmentPressure
+epsilonWallFunction
+externalCoupled
+externalCoupledTemperature
+externalWallHeatFluxTemperature
+extrapolatedCalculated
+fWallFunction
+fanPressure
+fanPressureJump
+fixedEnergy
+fixedFluxExtrapolatedPressure
+fixedFluxPressure
+fixedGradient
+fixedInternalValue
+fixedJump
+fixedJumpAMI
+fixedMean
+fixedMeanOutletInlet
+fixedPressureCompressibleDensity
+fixedProfile
+fixedUnburntEnthalpy
+fixedValue
+freestream
+freestreamPressure
+gradientEnergy
+gradientUnburntEnthalpy
+inletOutlet
+inletOutletTotalTemperature
+interfaceCompression
+internal
+kLowReWallFunction
+kqRWallFunction
+mapped
+mappedField
+mappedFixedInternalValue
+mixed
+mixedEnergy
+mixedUnburntEnthalpy
+nutLowReWallFunction
+nutURoughWallFunction
+nutUSpaldingWallFunction
+nutUWallFunction
+nutkRoughWallFunction
+nutkWallFunction
+omegaWallFunction
+outletInlet
+outletMappedUniformInlet
+partialSlip
+phaseHydrostaticPressure
+plenumPressure
+porousBafflePressure
+pressure
+prghEntrainmentPressure
+prghPressure
+prghTotalHydrostaticPressure
+prghTotalPressure
+prghUniformDensityHydrostaticPressure
+processor
+processorCyclic
+rotatingTotalPressure
+slip
+symmetry
+symmetryPlane
+syringePressure
+timeVaryingMappedFixedValue
+totalFlowRateAdvectiveDiffusive
+totalPressure
+totalTemperature
+turbulentInlet
+turbulentIntensityKineticEnergyInlet
+turbulentMixingLengthDissipationRateInlet
+turbulentMixingLengthFrequencyInlet
+uniformDensityHydrostaticPressure
+uniformFixedGradient
+uniformFixedValue
+uniformInletOutlet
+uniformJump
+uniformJumpAMI
+uniformTotalPressure
+v2WallFunction
+variableHeightFlowRate
+waveSurfacePressure
+waveTransmissive
+wedge
+zeroGradient
+)
+
+
+file: /home/karim/Desktop/Projects/CFD/OpenFoam_Projects/Heat_Transfer/2_Transient_State_Conduction/0/T/boundaryField/right from line 30 to line 34.
+
+    From function static Foam::tmp<Foam::fvPatchField<Type> > Foam::fvPatchField<Type>::New(const Foam::fvPatch&, const Foam::DimensionedField<Type, Foam::volMesh>&, const Foam::dictionary&) [with Type = double]
+    in file /home/ubuntu/OpenFOAM/OpenFOAM-9/src/finiteVolume/lnInclude/fvPatchFieldNew.C at line 128.
+
+FOAM exiting
+

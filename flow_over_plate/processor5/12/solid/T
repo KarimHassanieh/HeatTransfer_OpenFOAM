@@ -1,0 +1,82 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField;
+    location    "12/solid";
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   nonuniform List<scalar> 
+64
+(0òÜèÿ_s@ÈJïÿ_s@¿Ròÿ_s@fDÉóÿ_s@+Î—ôÿ_s@ªŒõÿ_s@’Ôuõÿ_s@0h¶õÿ_s@n.Rÿ_s@‚´¡ÿ_s@T šÿ_s@Ønp¥ÿ_s@–·Â«ÿ_s@€Ù¯ÿ_s@öÇ¯²ÿ_s@Ş½´ÿ_s@dm‡zû_s@¾»]ºü_s@Ñ_ı_s@(X­ı_s@S_^Ùı_s@Göı_s@¤›
+ş_s@&Sş_s@S;²å_s@‹÷ßí_s@¿|¯Şğ_s@²¯ò_s@Ø/l¼ó_s@‡©¼oô_s@è.µïô_s@‰`½Nõ_s@§’š|_s@W"Iç¡_s@Fµ,µ_s@B!Œ¾_s@ñ/‘Ä_s@úeàĞÇ_s@vÿNˆÊ_s@Uú»”Ì_s@
+9Ø]s@¦ºWw^s@¨OlôÈ^s@I§¯ñ^s@ÔXn4
+_s@g8›$_s@”MÍŸ'_s@’¯×11_s@=¡.ÁXs@ó˜ª´ÁZs@f.àßÚ[s@xçpl\s@T²ÄÀÅ\s@Zá]s@fRõ04]s@Ši€Y]s@+âzmKs@„iD·Qs@Ömê­Ts@®*LHVs@û9ßDMWs@N¦¹	Xs@R€}É™Xs@î%ƒYs@);
+
+boundaryField
+{
+    solid_bottom
+    {
+        type            fixedValue;
+        value           nonuniform List<scalar> 
+0
+;
+    }
+    solid_sides
+    {
+        type            zeroGradient;
+    }
+    front_back
+    {
+        type            empty;
+    }
+    solid_to_fluid
+    {
+        type            compressible::turbulentTemperatureCoupledBaffleMixed;
+        refValue        nonuniform List<scalar> 
+76
+(›¢M«33s@h×	îä6s@ÒwÃ‡x9s@±D–;l;s@l-ü<s@V2¬RI>s@z^ÏÂh?s@ÌNË&i@s@^ÎÀVAs@ÀÜ>Bs@ç‚ÊÈ4Cs@%<…ê]Ds@%<…ê]Ds@¦‰¦ÕEs@bFXYÌFs@e'‡Gs@¿_&êHs@tqË£Hs@i7BpIs@ Ôg‰Is@ã«ÍäõIs@0›ŸfJs@ø%ÕçJs@k6f˜Ks@k6f˜Ks@”å%Y<Ls@§'ì ®Ls@¶Ô4qMs@I¶ÍUMs@ì®›Ms@@øOİMs@ñd§qNs@ØxÎ¢cNs@‹@^¶Ns@`§ÂÍ1Os@@¶`k€Os@—¾¼Os@VÂÓûïOs@·.ImPs@*Ÿ×JPs@|­4éwPs@¯W°Ì©Ps@¦ú¶êPs@¦ú¶êPs@™öfš8Qs@ÅıànlQs@…‘#–Qs@4Õ´9»Qs@‚ğvŞQs@xWÊRs@ŒÕ„U)Rs@¦ á\Rs@¦ á\Rs@5atišRs@‚L(ñÃRs@?yqâåRs@)I¸¡Ss@Çüz"Ss@åö˜ASs@ÂŒBæeSs@¶ûo››Ss@¶ûo››Ss@K$Ä˜ÃSs@Yõ8âSs@¦AîNıSs@óõ¶RTs@áæùL2Ts@ƒ»ÒÌQTs@²-ÛdTs@²-ÛdTs@ãñã¡Ts@,®õ±»Ts@XJ˜ÓTs@ùã?êTs@Ôğ§™Us@[¯QÛ%Us@);
+        refGradient     uniform 0;
+        valueFraction   nonuniform List<scalar> 
+76
+(Æ»›×ä—ì?Æ»›×ä—ì?Å»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Å»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Å»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Å»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Å»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Å»›×ä—ì?Å»›×ä—ì?£’ÛGç—ì?£’ÛGç—ì?£’ÛGç—ì?£’ÛGç—ì?£’ÛGç—ì?£’ÛGç—ì?£’ÛGç—ì?£’ÛGç—ì?£’ÛGç—ì?£’ÛGç—ì?dgâ—ì?dgâ—ì?dgâ—ì?dgâ—ì?dgâ—ì?dgâ—ì?dgâ—ì?dgâ—ì?Œdgâ—ì?Ä»›×ä—ì?Å»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Å»›×ä—ì?Å»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Å»›×ä—ì?Æ»›×ä—ì?Ç»›×ä—ì?Å»›×ä—ì?Å»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Æ»›×ä—ì?Å»›×ä—ì?Ç»›×ä—ì?Ä»›×ä—ì?Ä»›×ä—ì?Æ»›×ä—ì?Å»›×ä—ì?È»›×ä—ì?Â»›×ä—ì?Ç»›×ä—ì?Æ»›×ä—ì?);
+        value           nonuniform List<scalar> 
+76
+(Ï¸‘È5s@‰+Ñ§9s@Yÿ=	b;s@q…„Š =s@Æ‚@è…>s@º4w–¯?s@ü°öl°@s@üwt…•As@.9	ÔiBs@g?<:9Cs@ÏéøDs@SWıwEs@‘˜!ÒÉEs@‘úkGs@Ìl˜ıõGs@‹ÃÜœHs@*gh%Is@xvï>›Is@À*BJs@A‡öihJs@½‡FZÉJs@şäÑ.Ks@üˆ¡Ks@LXN?Ls@3î€Ls@ VŠ"Ms@£@5ˆMs@ÌÏ7èØMs@V†dNs@*ÃA]\Ns@ÓE —Ns@nGPÑNs@¦½#Os@3ë{YOs@ğAóOs@6PA9Ps@J.s(oPs@*Ô;ñœPs@sŒòpÆPs@¼Í îPs@ëvfQs@-ñùBQs@Şlû|Qs@³ï×È˜Qs@e`aŞQs@šm}±Rs@STõ1Rs@ÄY÷SRs@ÚœĞ•rRs@;¬‘l’Rs@Ÿô{µRs@1Ú×âRs@<XdæöRs@(—®”.Ss@½\°SSs@
+±ÊrSs@~Ss@™å)¨Ss@ÈÕÓ÷ÃSs@kÇgäSs@¦â=eTs@Ükº#Ts@æn‘uGTs@ò0ÓbTs@–æ{Ts@*²E’Ts@½„º`ªTs@É†ÆTs@ÈğñTs@êÈ‹BıTs@9¿ÿKUs@’¼¿Z1Us@É+kEFUs@‚çêóZUs@_?ËšqUs@º™Ú6Us@);
+        Tnbr            T;
+        thicknessLayers List<scalar> 
+0
+;
+        kappaLayers     List<scalar> 
+0
+;
+    }
+    procBoundary5to4
+    {
+        type            processor;
+        value           nonuniform List<scalar> 
+8
+((Ä<ıÿ_s@ùıÿ_s@è^Zşÿ_s@N†şÿ_s@»şÿ_s@r¨¬şÿ_s@VÅ¶şÿ_s@•î½şÿ_s@);
+    }
+    procBoundary5to7
+    {
+        type            processor;
+        value           nonuniform List<scalar> 
+8
+(Ñ¶åõÿ_s@æ®A¶ÿ_s@„¬¡$ş_s@ü2®–õ_s@"5'Î_s@>P¦8_s@AhVv]s@}=œ¢hYs@);
+    }
+}
+
+
+// ************************************************************************* //

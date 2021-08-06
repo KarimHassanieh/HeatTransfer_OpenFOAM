@@ -1,0 +1,47 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 9-89839ae3b8cd
+Exec   : topoSet
+Date   : Aug 06 2021
+Time   : 01:18:58
+Host   : "karimh89"
+PID    : 6628
+I/O    : uncollated
+Case   : /home/karim/Desktop/Projects/CFD/OpenFoam_Projects/basic_chtMultiRegion/flow_over_plate
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading "topoSetDict"
+
+Time = 0
+    mesh not changed.
+Created cellSet c0
+    Applying source boxToCell
+    Adding cells with center within boxes 1((-0.5 0 0) (3 0.5 0.4))
+    cellSet c0 now size 12013
+Created cellZoneSet fluid
+    Applying source setToCellZone
+    Adding all cells from cellSet c0 ...
+    cellZoneSet fluid now size 12013
+Created cellSet c0
+    Applying source boxToCell
+    Adding cells with center within boxes 1((0 -0.25 0) (1 0 0.4))
+    cellSet c0 now size 512
+Created cellZoneSet solid
+    Applying source setToCellZone
+    Adding all cells from cellSet c0 ...
+    cellZoneSet solid now size 512
+End
+

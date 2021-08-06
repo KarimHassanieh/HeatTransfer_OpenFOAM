@@ -1,0 +1,86 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField;
+    location    "19/solid";
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   nonuniform List<scalar> 
+64
+(åşÿÿÿ_s@âşÿÿÿ_s@ğşÿÿÿ_s@òşÿÿÿ_s@õşÿÿÿ_s@ôşÿÿÿ_s@êşÿÿÿ_s@òşÿÿÿ_s@sôÿÿÿ_s@—ôÿÿÿ_s@¸ôÿÿÿ_s@Íôÿÿÿ_s@ßôÿÿÿ_s@ëôÿÿÿ_s@ğôÿÿÿ_s@úôÿÿÿ_s@ı›ÿÿÿ_s@Nÿÿÿ_s@Rÿÿÿ_s@Ÿÿÿÿ_s@ºŸÿÿÿ_s@8 ÿÿÿ_s@š ÿÿÿ_s@ï ÿÿÿ_s@+×üÿÿ_s@¡âüÿÿ_s@uëüÿÿ_s@]òüÿÿ_s@Û÷üÿÿ_s@?üüÿÿ_s@Ìÿüÿÿ_s@Èıÿÿ_s@q0èÿÿ_s@íèÿÿ_s@ZÖèÿÿ_s@]éÿÿ_s@î<éÿÿ_s@™aéÿÿ_s@qéÿÿ_s@“˜éÿÿ_s@™Yÿÿ_s@­_\ÿÿ_s@Æ‰^ÿÿ_s@•@`ÿÿ_s@v¡aÿÿ_s@ÿ¾bÿÿ_s@³¨cÿÿ_s@ndÿÿ_s@µ¢Ïûÿ_s@Ï2ãûÿ_s@<òûÿ_s@Ìşûÿ_s@Â´üÿ_s@âÅüÿ_s@jüÿ_s@M
+üÿ_s@ÆĞCçÿ_s@èÚÂçÿ_s@ÛR'èÿ_s@%ûwèÿ_s@g»¹èÿ_s@¯ïèÿ_s@Béÿ_s@?9Béÿ_s@);
+
+boundaryField
+{
+    solid_bottom
+    {
+        type            fixedValue;
+        value           uniform 310;
+    }
+    solid_sides
+    {
+        type            zeroGradient;
+    }
+    front_back
+    {
+        type            empty;
+    }
+    solid_to_fluid
+    {
+        type            compressible::turbulentTemperatureCoupledBaffleMixed;
+        refValue        nonuniform List<scalar> 
+0
+;
+        refGradient     nonuniform List<scalar> 
+0
+;
+        valueFraction   nonuniform List<scalar> 
+0
+;
+        value           nonuniform List<scalar> 
+0
+;
+        Tnbr            T;
+        thicknessLayers List<scalar> 
+0
+;
+        kappaLayers     List<scalar> 
+0
+;
+    }
+    procBoundary6to0
+    {
+        type            processor;
+        value           nonuniform List<scalar> 
+8
+(óşÿÿÿ_s@õÿÿÿ_s@B¡ÿÿÿ_s@œıÿÿ_s@°éÿÿ_s@¿$eÿÿ_s@5"üÿ_s@ãdéÿ_s@);
+    }
+    procBoundary6to4
+    {
+        type            processor;
+        value           nonuniform List<scalar> 
+8
+(âşÿÿÿ_s@Côÿÿÿ_s@<šÿÿÿ_s@úÇüÿÿ_s@Dµçÿÿ_s@¼öUÿÿ_s@®5¶ûÿ_s@ùŸæÿ_s@);
+    }
+    procBoundary6to7
+    {
+        type            processor;
+        value           nonuniform List<scalar> 
+8
+(K›#{ÿ_s@Î¹~ÿ_s@’½p€ÿ_s@4ÍW‚ÿ_s@µğçƒÿ_s@¢:2…ÿ_s@øÅE†ÿ_s@Î41‡ÿ_s@);
+    }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,78 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      binary;
+    class       volScalarField;
+    location    "94/solid";
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   nonuniform List<scalar> 
+64
+(­c¯ºÿ_s@W¯ï¹ÿ_s@4E!¸ÿ_s@AÕ¶´ÿ_s@¬(¯ÿ_s@lŠ§ÿ_s@>bfŸÿ_s@İºß™ÿ_s@ã¬øşş_s@=Vüş_s@]Ëõş_s@DuRéş_s@øÔş_s@¹ş_s@ãh›ş_s@Á¹†ş_s@jG—ı_s@?F‘ı_s@ˆO6‚ı_s@Èâeı_s@Âò85ı_s@qAóü_s@‘én¬ü_s@ù¼*|ü_s@@Œóµú_s@q#èªú_s@Y-¡‹ú_s@ØÌáMú_s@øgµçù_s@Q†#Zù_s@X<€Áø_s@ÎPYø_s@î¾˜ğô_s@D\Iİô_s@‹5 ô_s@•Ò…$ô_s@öVÉUó_s@D	ƒ5ò_s@Œ»çüğ_s@	Ïí%ğ_s@¤çÒé_s@ÿ¨´é_s@ıÛÿCé_s@XlXè_s@ÒV°Éæ_s@œW&™ä_s@d£4â_s@Ì:hŒà_s@E›ëRÕ_s@LR¬*Õ_s@4gèfÔ_s@CÍh¼Ò_s@½È&ßÏ_s@í*“ÍË_s@<×ÒOÇ_s@'­­+Ä_s@J{(±_s@Ã}%±_s@@ş=Ã¯_s@İNOæ¬_s@çká§_s@œ–Ü§ _s@}’˜_s@×’_s@);
+
+boundaryField
+{
+    solid_bottom
+    {
+        type            fixedValue;
+        value           uniform 310;
+    }
+    solid_sides
+    {
+        type            zeroGradient;
+    }
+    front_back
+    {
+        type            empty;
+    }
+    solid_to_fluid
+    {
+        type            compressible::turbulentTemperatureCoupledBaffleMixed;
+        refValue        nonuniform List<scalar> 
+0
+;
+        refGradient     nonuniform List<scalar> 
+0
+;
+        valueFraction   nonuniform List<scalar> 
+0
+;
+        value           nonuniform List<scalar> 
+0
+;
+        Tnbr            T;
+        thicknessLayers List<scalar> 
+0
+;
+        kappaLayers     List<scalar> 
+0
+;
+    }
+    procBoundary2to0
+    {
+        type            processor;
+        value           nonuniform List<scalar> 
+8
+(rÃºÿ_s@üéÿş_s@ëÌĞ–ı_s@>=ô³ú_s@¢MÆèô_s@…±*»é_s@«kÕ_s@H¸“°_s@);
+    }
+    procBoundary2to3
+    {
+        type            processor;
+        value           nonuniform List<scalar> 
+8
+(]<Ö t_s@F.!t_s@¶Œ¤=r_s@˜”m_s@4e_s@©ºéğX_s@ç_ùJ_s@˜½8â@_s@);
+    }
+}
+
+
+// ************************************************************************* //
