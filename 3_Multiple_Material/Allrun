@@ -12,5 +12,8 @@ cd "${0%/*}" || exit 1
 # - does *not* run in log file already exists
 ./Allclean
 runApplication blockMesh
+runApplication checkMesh
+runApplication topoSet
+runApplication splitMeshRegions -cellZones -overwrite
 #runParallel "$(getApplication)"
 #------------------------------------------------------------------------------

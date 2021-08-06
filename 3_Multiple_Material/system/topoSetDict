@@ -26,6 +26,21 @@ actions
             box (0 0.25 0 ) (0.9 0.5 0.1); // Edit box bounds as required
         }
     }
+    
+    
+    
+         {
+        name    A;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set A; 
+        }
+    }
+    
+    
 //ADD MATERIAL B
       {
         action  new;
@@ -37,6 +52,19 @@ actions
             box (0 0 0) (0.6 0.25 0.1); // Edit box bounds as required
         }
     }
+
+
+     {
+        name    B;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set B; 
+        }
+    }
+
 
 
 //ADD MATERIAL C
@@ -51,7 +79,16 @@ actions
         }
     }
 
-    
+         {
+        name    C;
+        type    cellZoneSet;
+        action  new;
+        source  setToCellZone;
+        sourceInfo
+        {
+            set C; 
+        }
+    }
     );
 
 // ************************************************************************* //

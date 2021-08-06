@@ -9,16 +9,25 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    location    "constant";
-    object      regionProperties;
+    class       volScalarField;
+    location    "0";
+    object      p;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-regions
-(
-   
-    solid       (A B C)
-);
+dimensions      [1 -1 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    #includeEtc "caseDicts/setConstraintTypes"
+
+    ".*"
+    {
+        type            calculated;
+        value           $internalField;
+    }
+}
 
 // ************************************************************************* //

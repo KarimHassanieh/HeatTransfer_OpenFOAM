@@ -1,0 +1,55 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 9-89839ae3b8cd
+Exec   : topoSet
+Date   : Aug 06 2021
+Time   : 16:13:58
+Host   : "karimh89"
+PID    : 48821
+I/O    : uncollated
+Case   : /home/karim/Desktop/Projects/CFD/OpenFoam_Projects/Heat_Transfer/3_Multiple_Material
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading "topoSetDict"
+
+Time = 0
+    mesh not changed.
+Created cellSet A
+    Applying source boxToCell
+    Adding cells with center within boxes 1((0 0.25 0) (0.9 0.5 0.1))
+    cellSet A now size 20000
+Created cellZoneSet A
+    Applying source setToCellZone
+    Adding all cells from cellSet A ...
+    cellZoneSet A now size 20000
+Created cellSet B
+    Applying source boxToCell
+    Adding cells with center within boxes 1((0 0 0) (0.6 0.25 0.1))
+    cellSet B now size 13300
+Created cellZoneSet B
+    Applying source setToCellZone
+    Adding all cells from cellSet B ...
+    cellZoneSet B now size 13300
+Created cellSet C
+    Applying source boxToCell
+    Adding cells with center within boxes 1((0.6 0 0) (0.9 0.25 0.1))
+    cellSet C now size 6700
+Created cellZoneSet C
+    Applying source setToCellZone
+    Adding all cells from cellSet C ...
+    cellZoneSet C now size 6700
+End
+

@@ -1,0 +1,71 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  9
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 9-89839ae3b8cd
+Exec   : splitMeshRegions -cellZones -overwrite
+Date   : Aug 06 2021
+Time   : 16:13:58
+Host   : "karimh89"
+PID    : 48822
+I/O    : uncollated
+Case   : /home/karim/Desktop/Projects/CFD/OpenFoam_Projects/Heat_Transfer/3_Multiple_Material
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Creating single patch per inter-region interface.
+
+Trying to match regions to existing cell zones.
+
+
+Number of regions:3
+
+Writing region per cell file (for manual decomposition) to "constant/cellToRegion"
+
+Writing region per cell as volScalarField to "0/cellToRegion"
+
+Region	Cells
+------	-----
+0	13300
+1	6700
+2	20000
+
+Region	Zone	Name
+------	----	----
+0	1	B
+1	2	C
+2	0	A
+
+Sizes of interfaces between regions:
+
+Interface	Region	Region	Faces
+---------	------	------	-----
+0		0	1	100
+1		1	2	67
+2		0	2	133
+
+Reading geometric fields
+
+Reading volScalarField T
+
+
+--> FOAM FATAL IO ERROR: 
+Cannot find patchField entry for left
+
+file: /home/karim/Desktop/Projects/CFD/OpenFoam_Projects/Heat_Transfer/3_Multiple_Material/0/T/boundaryField from line 11 to line 39.
+
+    From function void Foam::GeometricField<Type, PatchField, GeoMesh>::Boundary::readField(const Foam::DimensionedField<TypeR, GeoMesh>&, const Foam::dictionary&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]
+    in file /home/ubuntu/OpenFOAM/OpenFOAM-9/src/OpenFOAM/lnInclude/GeometricBoundaryField.C at line 184.
+
+FOAM exiting
+
