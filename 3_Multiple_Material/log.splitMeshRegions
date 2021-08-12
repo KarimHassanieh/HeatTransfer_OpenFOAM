@@ -7,10 +7,10 @@
 \*---------------------------------------------------------------------------*/
 Build  : 9-89839ae3b8cd
 Exec   : splitMeshRegions -cellZones -overwrite
-Date   : Aug 06 2021
-Time   : 16:13:58
+Date   : Aug 12 2021
+Time   : 16:36:41
 Host   : "karimh89"
-PID    : 48822
+PID    : 23743
 I/O    : uncollated
 Case   : /home/karim/Desktop/Projects/CFD/OpenFoam_Projects/Heat_Transfer/3_Multiple_Material
 nProcs : 1
@@ -57,15 +57,71 @@ Interface	Region	Region	Faces
 Reading geometric fields
 
 Reading volScalarField T
+Reading volScalarField cellToRegion
+Reading volScalarField p
 
 
---> FOAM FATAL IO ERROR: 
-Cannot find patchField entry for left
+Adding patches
 
-file: /home/karim/Desktop/Projects/CFD/OpenFoam_Projects/Heat_Transfer/3_Multiple_Material/0/T/boundaryField from line 11 to line 39.
 
-    From function void Foam::GeometricField<Type, PatchField, GeoMesh>::Boundary::readField(const Foam::DimensionedField<TypeR, GeoMesh>&, const Foam::dictionary&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]
-    in file /home/ubuntu/OpenFOAM/OpenFOAM-9/src/OpenFOAM/lnInclude/GeometricBoundaryField.C at line 184.
+Adding patches
 
-FOAM exiting
+For interface between region B and C added patches
+    5	B_to_C
+    6	C_to_B
+For interface between region C and A added patches
+    7	C_to_A
+    8	A_to_C
+For interface between region B and A added patches
+    9	B_to_A
+    10	A_to_B
+
+Region 0
+-------- 
+Creating mesh for region 0 B
+Testing:"/home/karim/Desktop/Projects/CFD/OpenFoam_Projects/Heat_Transfer/3_Multiple_Material/system/B/fvSchemes"
+Mapping fields
+Mapping field cellToRegion
+Mapping field p
+Mapping field T
+Deleting empty patches
+Writing new mesh
+Writing addressing to base mesh
+Writing map pointRegionAddressing from region0 points back to base mesh.
+Writing map faceRegionAddressing from region0 faces back to base mesh.
+Writing map cellRegionAddressing from region0 cells back to base mesh.
+Writing map boundaryRegionAddressing from region0 boundary back to base mesh.
+
+Region 1
+-------- 
+Creating mesh for region 1 C
+Testing:"/home/karim/Desktop/Projects/CFD/OpenFoam_Projects/Heat_Transfer/3_Multiple_Material/system/C/fvSchemes"
+Mapping fields
+Mapping field cellToRegion
+Mapping field p
+Mapping field T
+Deleting empty patches
+Writing new mesh
+Writing addressing to base mesh
+Writing map pointRegionAddressing from region1 points back to base mesh.
+Writing map faceRegionAddressing from region1 faces back to base mesh.
+Writing map cellRegionAddressing from region1 cells back to base mesh.
+Writing map boundaryRegionAddressing from region1 boundary back to base mesh.
+
+Region 2
+-------- 
+Creating mesh for region 2 A
+Testing:"/home/karim/Desktop/Projects/CFD/OpenFoam_Projects/Heat_Transfer/3_Multiple_Material/system/A/fvSchemes"
+Mapping fields
+Mapping field cellToRegion
+Mapping field p
+Mapping field T
+Deleting empty patches
+Writing new mesh
+Writing addressing to base mesh
+Writing map pointRegionAddressing from region2 points back to base mesh.
+Writing map faceRegionAddressing from region2 faces back to base mesh.
+Writing map cellRegionAddressing from region2 cells back to base mesh.
+Writing map boundaryRegionAddressing from region2 boundary back to base mesh.
+End
 

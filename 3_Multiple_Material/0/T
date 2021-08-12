@@ -19,14 +19,51 @@ dimensions [0 0 0 1 0 0 0];
 internalField uniform 300;
 boundaryField
 {
+
 top
 {
-type
-kappa
-q
-Manel Bosch Hermosilla
-externalWallHeatFluxTemperature;
-solidThermo;
-uniform 150;
+type externalWallHeatFluxTemperature;
+kappa solidThermo;
+q uniform 150;
+value uniform 300;
+kappaName none;
+}
+
+bottom
+{
+type zeroGradient;
+}
+
+left
+{
+type externalWallHeatFluxTemperature;
+kappa solidThermo;
+Ta uniform 275;
+h uniform 5;
+value uniform 300;
+kappaName none;
+}
+
+right
+{
+type externalWallHeatFluxTemperature;
+kappa solidThermo;
+Ta uniform 473;
+h uniform 100;
+value uniform 300;
+kappaName none;
+}
+
+frontAndBack
+{
+type empty;
+
+}
+
+
+
+}
+
+
 
 // ************************************************************************* //

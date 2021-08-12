@@ -15,5 +15,27 @@ runApplication blockMesh
 runApplication checkMesh
 runApplication topoSet
 runApplication splitMeshRegions -cellZones -overwrite
+my_array=(foo bar)
+
+for i in "${my_array[@]}"; do echo "$i"; done
+
+# foamDictionary   0/$i/T  -entry boundaryField/"$i"_to_"$i+1"   -set "
+#  {
+# type compressible::turbulentTemperatureCoupledBaffleMixed ;
+#Tnbr T;
+#kappa solidThermo;
+#kappaName none;
+#value uniform 300;}" 
+
+# foamDictionary  0/A/T  -entry boundaryField/A_to_C   -set "
+# {
+# type compressible::turbulentTemperatureCoupledBaffleMixed ;
+#Tnbr T;
+#kappa solidThermo;
+#kappaName none;
+#value uniform 300;
+# }" 
+
+
 #runParallel "$(getApplication)"
 #------------------------------------------------------------------------------
