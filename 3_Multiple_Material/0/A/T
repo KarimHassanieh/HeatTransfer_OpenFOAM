@@ -7,14 +7,14 @@
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
-    format      binary;
-    class       volScalarField;
-    location    "0/A";
-    object      T;
+    format          binary;
+    class           volScalarField;
+    location        "0/A";
+    object          T;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 0 0 1 0 0 0];
+dimensions      [ 0 0 0 1 0 0 0 ];
 
 internalField   uniform 300;
 
@@ -52,13 +52,19 @@ boundaryField
     }
     A_to_C
     {
-        type            calculated;
-        value           uniform 0;
+        type            compressible::turbulentTemperatureCoupledBaffleMixed;
+        Tnbr            T;
+        kappa           solidThermo;
+        kappaName       none;
+        value           uniform 300;
     }
     A_to_B
     {
-        type            calculated;
-        value           uniform 0;
+        type            compressible::turbulentTemperatureCoupledBaffleMixed;
+        Tnbr            T;
+        kappa           solidThermo;
+        kappaName       none;
+        value           uniform 300;
     }
 }
 

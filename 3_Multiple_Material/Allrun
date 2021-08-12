@@ -15,26 +15,58 @@ runApplication blockMesh
 runApplication checkMesh
 runApplication topoSet
 runApplication splitMeshRegions -cellZones -overwrite
-my_array=(foo bar)
+#Modify in Region A
+runApplication -overwrite foamDictionary   0/A/T  -entry boundaryField/A_to_B   -set "
+  {
+ type compressible::turbulentTemperatureCoupledBaffleMixed ;
+Tnbr T;
+kappa solidThermo;
+kappaName none;
+value uniform 300;}" 
 
-for i in "${my_array[@]}"; do echo "$i"; done
+runApplication -overwrite foamDictionary  0/A/T  -entry boundaryField/A_to_C   -set "
+ {
+ type compressible::turbulentTemperatureCoupledBaffleMixed ;
+Tnbr T;
+kappa solidThermo;
+kappaName none;
+value uniform 300;
+ }" 
 
-# foamDictionary   0/$i/T  -entry boundaryField/"$i"_to_"$i+1"   -set "
-#  {
-# type compressible::turbulentTemperatureCoupledBaffleMixed ;
-#Tnbr T;
-#kappa solidThermo;
-#kappaName none;
-#value uniform 300;}" 
+#Modify in Region B
+runApplication -overwrite foamDictionary   0/B/T  -entry boundaryField/B_to_A   -set "
+  {
+ type compressible::turbulentTemperatureCoupledBaffleMixed ;
+Tnbr T;
+kappa solidThermo;
+kappaName none;
+value uniform 300;}" 
 
-# foamDictionary  0/A/T  -entry boundaryField/A_to_C   -set "
-# {
-# type compressible::turbulentTemperatureCoupledBaffleMixed ;
-#Tnbr T;
-#kappa solidThermo;
-#kappaName none;
-#value uniform 300;
-# }" 
+runApplication -overwrite foamDictionary  0/B/T  -entry boundaryField/B_to_C   -set "
+ {
+ type compressible::turbulentTemperatureCoupledBaffleMixed ;
+Tnbr T;
+kappa solidThermo;
+kappaName none;
+value uniform 300;
+ }" 
+#Modify in Region C
+runApplication -overwrite foamDictionary   0/C/T  -entry boundaryField/C_to_B   -set "
+  {
+ type compressible::turbulentTemperatureCoupledBaffleMixed ;
+Tnbr T;
+kappa solidThermo;
+kappaName none;
+value uniform 300;}" 
+
+runApplication -overwrite foamDictionary  0/C/T  -entry boundaryField/C_to_A   -set "
+ {
+ type compressible::turbulentTemperatureCoupledBaffleMixed ;
+Tnbr T;
+kappa solidThermo;
+kappaName none;
+value uniform 300;
+ }" 
 
 
 #runParallel "$(getApplication)"

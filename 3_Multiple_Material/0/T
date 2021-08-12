@@ -2,68 +2,68 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  7
+    \\  /    A nd           | Version:  9
      \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
-    version     2.0;
-    format      ascii;
-    class       volScalarField;
-    location    "0";
-    object      T;
+    version         2;
+    format          ascii;
+    class           volScalarField;
+    location        "0";
+    object          T;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions [0 0 0 1 0 0 0];
-internalField uniform 300;
+dimensions      [ 0 0 0 1 0 0 0 ];
+
+internalField   uniform 300;
+
 boundaryField
 {
-
-top
-{
-type externalWallHeatFluxTemperature;
-kappa solidThermo;
-q uniform 150;
-value uniform 300;
-kappaName none;
+    top
+    {
+        type            externalWallHeatFluxTemperature;
+        kappa           solidThermo;
+        q               uniform 150;
+        value           uniform 300;
+        kappaName       none;
+    }
+    bottom
+    {
+        type            zeroGradient;
+    }
+    left
+    {
+        type            externalWallHeatFluxTemperature;
+        kappa           solidThermo;
+        Ta              uniform 275;
+        h               uniform 5;
+        value           uniform 300;
+        kappaName       none;
+    }
+    right
+    {
+        type            externalWallHeatFluxTemperature;
+        kappa           solidThermo;
+        Ta              uniform 473;
+        h               uniform 100;
+        value           uniform 300;
+        kappaName       none;
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
+    _to_+1
+    {
+        type            compressible::turbulentTemperatureCoupledBaffleMixed;
+        Tnbr            T;
+        kappa           solidThermo;
+        kappaName       none;
+        value           uniform 300;
+    }
 }
-
-bottom
-{
-type zeroGradient;
-}
-
-left
-{
-type externalWallHeatFluxTemperature;
-kappa solidThermo;
-Ta uniform 275;
-h uniform 5;
-value uniform 300;
-kappaName none;
-}
-
-right
-{
-type externalWallHeatFluxTemperature;
-kappa solidThermo;
-Ta uniform 473;
-h uniform 100;
-value uniform 300;
-kappaName none;
-}
-
-frontAndBack
-{
-type empty;
-
-}
-
-
-
-}
-
 
 
 // ************************************************************************* //

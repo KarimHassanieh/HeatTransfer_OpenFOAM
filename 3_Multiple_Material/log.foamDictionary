@@ -1,0 +1,9 @@
+New entry C_to_A
+{
+    type            compressible::turbulentTemperatureCoupledBaffleMixed;
+    Tnbr            T;
+    kappa           solidThermo;
+    kappaName       none;
+    value           uniform 300;
+}
+
