@@ -7,10 +7,10 @@
 \*---------------------------------------------------------------------------*/
 Build  : 9-89839ae3b8cd
 Exec   : blockMesh
-Date   : Aug 06 2021
-Time   : 12:39:53
+Date   : Aug 13 2021
+Time   : 07:00:01
 Host   : "karimh89"
-PID    : 34940
+PID    : 26628
 I/O    : uncollated
 Case   : /home/karim/Desktop/Projects/CFD/OpenFoam_Projects/Heat_Transfer/2_Transient_State_Conduction
 nProcs : 1
@@ -49,8 +49,8 @@ Creating patches
 Creating cells
 Creating points with scale 1
     Block 0 cell size :
-        i : 0.000509588 .. 0.00509588
-        j : 0.01 .. 0.01
+        i : 0.002 .. 0.002
+        j : 1
         k : 0.1
 
 Writing polyMesh
@@ -58,17 +58,17 @@ Writing polyMesh
 Mesh Information
 ----------------
   boundingBox: (0 0 0) (0.2 1 0.1)
-  nPoints: 20402
-  nCells: 10000
-  nFaces: 40200
-  nInternalFaces: 19800
+  nPoints: 404
+  nCells: 100
+  nFaces: 501
+  nInternalFaces: 99
 ----------------
 Patches
 ----------------
-  patch 0 (start: 19800 size: 100) name: left
-  patch 1 (start: 19900 size: 100) name: right
-  patch 2 (start: 20000 size: 20000) name: frontAndBack
-  patch 3 (start: 40000 size: 200) name: top_bottom
+  patch 0 (start: 99 size: 1) name: left
+  patch 1 (start: 100 size: 1) name: right
+  patch 2 (start: 101 size: 200) name: frontAndBack
+  patch 3 (start: 301 size: 200) name: top_bottom
 
 End
 

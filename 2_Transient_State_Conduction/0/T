@@ -27,12 +27,14 @@ boundaryField
 
     right
     {
-        type            oscillatingFixedValue;
-        refValue       uniform 1;//refernce value of oscillation
-        offset        292;//oscillation mean value offse
-        amplitude     constant 20;// amplitude of oscillation
-        frequency     constant 1.1574e-5;//frequency 1/86400 
-        
+        type           uniformFixedValue;
+       uniformValue
+       {
+        type           sine;
+        level          293;//oscillation mean value offset
+        amplitude      20;// amplitude of oscillation
+        frequency      1.1574e-5;//frequency 1/86400 
+        }
     }
 
     left

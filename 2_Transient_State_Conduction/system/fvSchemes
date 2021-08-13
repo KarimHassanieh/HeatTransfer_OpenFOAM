@@ -17,7 +17,7 @@ FoamFile
 
 ddtSchemes
 {
-    default         steadyState;
+    default         CrankNicolson 0.7;
 }
 
 gradSchemes

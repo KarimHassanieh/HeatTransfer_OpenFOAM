@@ -20,29 +20,29 @@ FoamFile
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          100;
-        startFace       19800;
+        nFaces          1;
+        startFace       99;
     }
     right
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          100;
-        startFace       19900;
+        nFaces          1;
+        startFace       100;
     }
     frontAndBack
     {
         type            empty;
         inGroups        List<word> 1(empty);
-        nFaces          20000;
-        startFace       20000;
+        nFaces          200;
+        startFace       101;
     }
     top_bottom
     {
         type            wall;
         inGroups        List<word> 1(wall);
         nFaces          200;
-        startFace       40000;
+        startFace       301;
     }
 )
 
